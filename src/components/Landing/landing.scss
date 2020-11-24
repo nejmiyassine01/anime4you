@@ -1,0 +1,124 @@
+@mixin background {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carousel {
+    width: 80vw;
+    display: flex;
+
+    @media only screen and (max-width: 1070px) {
+        width: 90vw;
+    }
+}
+
+.landing {
+    overflow: hidden;
+    min-width: 80vw;
+    height: calc(100vh - 80px);
+    position: relative;
+
+    @media only screen and (max-width: 1070px) {
+        min-width: 90vw;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+
+        @media only screen and (max-width: 1070px) {
+            width: 100%;
+        }
+
+        &--0 {
+            background: url('../../assets/deadsoul.png');
+            @include background;
+        }
+        
+        &--1 {
+            background: url('../../assets/Nanatsu.jpg');
+            @include background;
+        }
+    }
+
+    &__container {
+        position: absolute;
+        bottom: 50px;
+        left: 100px;
+        color: #fff;
+        max-width: 600px;
+
+        @media only screen and (max-width: 750px) {
+            bottom: 50px;
+            left: 50px;
+            // text-align: center;
+        }
+
+        & h2 {
+            margin: 20px 0;
+            opacity: 1;
+            text-transform: capitalize;
+
+            @media only screen and (max-width: 750px) {
+                & span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        & img {
+            height: 30px; 
+            max-width: 30px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+        
+        & p {
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+    }
+
+    &__span {
+        display: flex;
+        background-color: #ee551d;
+        max-width: 90px;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        & svg {
+            margin-right: 5px;
+        }
+
+        &:hover {
+            background-color: #d83a00;
+        }
+    }
+
+    &__button {
+        border: none;
+        border-radius: 10px;
+        background-color: #6C5DD3;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        margin-top: 20px;
+        
+        &:hover {
+            background-color: #3e27d4;
+        }
+    }
+}

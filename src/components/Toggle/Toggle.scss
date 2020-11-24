@@ -1,0 +1,96 @@
+.toggle {
+    height: 80px;
+    border-top: 1px solid #ccc;
+
+    &__design {
+        cursor: pointer;
+        width: 70px;
+        height: 32px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: 850px) {
+            width: 40px;
+            height: 20px;
+        }
+    }
+
+    &__background {
+        width: 70px;
+        height: 32px;
+        border-radius: 50px;
+        position: relative;
+
+        @media only screen and (max-width: 1070px) {
+            width: 40px;
+            height: 20px;
+        }
+
+        &--light {
+            background-color: rgb(184, 184, 184);
+        }
+
+        &--dark {
+            background-color: #000;
+        }
+    }
+
+    &__notch {
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        top: 2px;
+        transition: all .3s ease-in;
+
+        @media only screen and (max-width: 1070px) {
+            width: 18px;
+            height: 18px;
+            top: 0px;
+        }
+
+        &--light {
+            background-color: #fff;
+            left: 2px;
+        }
+        
+        &--dark {
+            background-color: rgb(68, 71, 255);
+            transform: translateX(140%);
+
+            @media only screen and (max-width: 1070px) {
+                transform: translateX(110%);
+            }
+        }
+    
+    }
+
+
+    &__notchInt {
+        position: absolute;
+        border-radius: 50%;
+        top: 4px;
+        left: 4px;
+        height: 20px;
+        width: 20px;
+
+        @media only screen and (max-width: 1070px) {
+            top: 3px;
+            left: 3px;
+            height: 12px;
+            width: 12px;
+        }
+
+        &--light {
+            background-color: #000000;
+        }
+        
+        &--dark {
+            background-color: rgba(243, 243, 243, 1);
+        }
+    }
+
+}
+

@@ -1,0 +1,66 @@
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+}
+
+.banner {
+    height: 80px;
+    line-height: 80;
+    padding: 40px;
+    @include flexCenter;
+    width: 100%;
+    justify-content: space-between;
+
+    &__browse {
+        @include flexCenter;
+    }
+
+    &__icons {
+        font-size: 20px;
+        margin: 0 15px;
+        cursor: pointer;
+
+        @media only screen and (max-width: 850px) {
+            margin: 0;
+        }
+    }
+
+    &__select {
+        background: transparent;
+        outline: transparent;
+        border: none;
+        border-radius: 10px;
+        color: #777;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    &__search {
+        @include flexCenter;
+    }
+
+    &__input {
+        padding: 10px;
+        border-radius: 10px;
+        background: transparent;
+        border: none;
+        width: 100%;
+        color: #777;
+        font-weight: 500;
+        outline: none;
+        cursor: pointer;
+
+        @media (max-width: 700px) {
+            width: 60%;
+        }
+    }
+
+    &__profils {
+        @include flexCenter;
+
+        @media only screen and (max-width: 850px) {
+            display: none;
+        }
+    }
+    
+}

@@ -1,0 +1,84 @@
+.feeds {
+    height: calc(100vh - 160px);
+    overflow-y: scroll;
+    color: #333;
+    text-transform: capitalize;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__box {
+        position: relative;
+        
+        & h4 {
+            margin: 20px;
+        }
+        
+        & h4 {
+            @media only screen and (max-width: 1070px) {
+                display: none;
+            }
+        }
+        
+        & ul {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 100%;
+
+            & li {
+                position: relative;
+                width: 100%;
+                list-style: none;
+                padding: 20px;
+                transition: all .3s ease-in-out;
+
+                &:first-child{
+                    margin-top: 15px;
+                }
+
+                &:hover {
+                    background-color: #6C5DD3 !important;
+                    
+                    & a {
+                        color: #fff;
+                    }
+                }
+
+                & a {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    display: flex;
+                    text-decoration: none;
+                    align-items: center;
+                    font-weight: 600;
+                    text-align: center;
+
+                    @media only screen and (max-width: 1070px) {
+                        justify-content: center;
+                    }
+
+                    & svg {
+                        position: relative;
+                        display: block;
+                        min-width: 50px;
+                        font-size: 24px;
+                    }
+
+                    & .title {
+                        position: relative;
+                        display: block;
+                        padding: 0 10px;
+                        text-align: start;
+
+                        @media only screen and (max-width: 1070px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
